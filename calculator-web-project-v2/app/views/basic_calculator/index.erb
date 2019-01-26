@@ -1,0 +1,19 @@
+<!-- todo: use css grid, build dynamic x/y 100% -->
+<div style="zoom:400%">
+
+
+<%= form_tag({action: "process_result"}, method: "get") do %>
+  <%= number_field_tag :left_hand_operand, params[:left_hand_operand] %>
+  <br>
+  <%= radio_button_tag :operator, 'sum', :checked => true %> +
+  <%= radio_button_tag :operator, 'difference' %> -
+  <br>
+  <%= number_field_tag :right_hand_operand, params[:right_hand_operand] %>
+  <br>
+  <%= submit_tag '=' %>
+<% end %>
+
+<% unless @output.nil? %>
+  <p> = <%= @output %> </p>
+<% end %>
+</div>

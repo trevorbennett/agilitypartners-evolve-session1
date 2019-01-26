@@ -1,0 +1,31 @@
+
+<!-- todo: use css grid dynamic x/y 100% -->
+
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "1"'>1</button>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "2"'>2</button>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "3"'>3</button>
+ <br/>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "4"'>4</button>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "5"'>5</button>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "6"'>6</button>
+ <br/>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "7"'>7</button>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "8"'>8</button>
+ <button type="button" onclick='document.getElementById("demo").innerHTML += "9"'>9</button>
+ <br/>
+ <button type="button" id='minusOperator' onclick='document.getElementById("demo").innerHTML += "-";document.getElementById("plusOperator").disabled = true;document.getElementById("minusOperator").disabled = true;'>-</button>
+ <p>Find me in app/views/say/hello.html.erb</p>
+ <%= form_tag({action: "new"}, method: "get") do %>
+   <%= hidden_field_tag(:q, value = ) %>
+   <%= submit_tag("=") %>
+
+ <% end %>
+
+  <button id='plusOperator' type="button" onclick='document.getElementById("demo").innerHTML += "+"; document.getElementById("minusOperator").disabled = true;document.getElementById("plusOperator").disabled = true '>+</button>
+ <br/>
+<div id="demo">
+</div>
+
+<% unless @result.nil? %>
+  <p> = <%= @result %> </p>
+<% end %>
