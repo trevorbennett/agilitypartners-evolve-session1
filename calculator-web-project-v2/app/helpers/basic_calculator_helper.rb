@@ -1,11 +1,18 @@
-module BasicCalculatorHelper
-  class Calculator
-    def self.sum(a, b)
+class Calculator
+    def calculate(operator, left_operand, right_operand)
+      if('sum' == operator)
+        return sum(left_operand,right_operand)
+      end
+      if('difference' == operator)
+        return difference(left_operand,right_operand)
+      end
+    end+
+
+    def sum(a, b)
       a.to_i + b.to_i
     end
 
-    def self.difference(a, b)
+    def difference(a, b)
       a.to_i - b.to_i
     end
-  end
 end
