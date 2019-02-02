@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_tag("./search", method: :get) do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Employee count:</strong>
+  <%= @company.employee.size %>
+</p>
+
+<p>
+  <strong>Employees:</strong>
+  <% @company.employee.each do |employee| %>
+  <br/>
+  <tr>
+    <td><%= employee.name %></td>
+    <td><%= link_to 'Show', employee %></td>
+    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Purge', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
