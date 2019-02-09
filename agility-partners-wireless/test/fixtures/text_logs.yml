@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  to: one
+  from: one
+  sent: 2019-02-04 17:35:02
+  message: MyString
+
+two:
+  to: two
+  from: two
+  sent: 2019-02-04 17:35:02
+  message: MyString

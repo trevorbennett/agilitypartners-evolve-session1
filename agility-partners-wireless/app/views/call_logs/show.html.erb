@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To:</strong>
+  <%= @call_log.to %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @call_log.from %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @call_log.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @call_log.end %>
+</p>
+
+<%= link_to 'Edit', edit_call_log_path(@call_log) %> |
+<%= link_to 'Back', call_logs_path %>

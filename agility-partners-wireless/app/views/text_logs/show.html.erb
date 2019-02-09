@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>To:</strong>
+  <%= @text_log.to %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @text_log.from %>
+</p>
+
+<p>
+  <strong>Sent:</strong>
+  <%= @text_log.sent %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @text_log.message %>
+</p>
+
+<%= link_to 'Edit', edit_text_log_path(@text_log) %> |
+<%= link_to 'Back', text_logs_path %>

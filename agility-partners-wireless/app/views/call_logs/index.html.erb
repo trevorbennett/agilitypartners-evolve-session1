@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Call Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>From</th>
+      <th>Start</th>
+      <th>End</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @call_logs.each do |call_log| %>
+      <tr>
+        <td><%= call_log.to %></td>
+        <td><%= call_log.from %></td>
+        <td><%= call_log.start %></td>
+        <td><%= call_log.end %></td>
+        <td><%= link_to 'Show', call_log %></td>
+        <td><%= link_to 'Edit', edit_call_log_path(call_log) %></td>
+        <td><%= link_to 'Destroy', call_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Call Log', new_call_log_path %>

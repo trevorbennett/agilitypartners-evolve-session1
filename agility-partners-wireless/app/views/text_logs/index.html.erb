@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Text Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>From</th>
+      <th>Sent</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @text_logs.each do |text_log| %>
+      <tr>
+        <td><%= text_log.to %></td>
+        <td><%= text_log.from %></td>
+        <td><%= text_log.sent %></td>
+        <td><%= text_log.message %></td>
+        <td><%= link_to 'Show', text_log %></td>
+        <td><%= link_to 'Edit', edit_text_log_path(text_log) %></td>
+        <td><%= link_to 'Destroy', text_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Text Log', new_text_log_path %>

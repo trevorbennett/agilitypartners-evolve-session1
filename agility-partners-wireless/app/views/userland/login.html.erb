@@ -1,0 +1,9 @@
+<h1>Userland#login</h1>
+<p>Find me in app/views/userland/login.html.erb</p>
+
+<%= form_tag({action: "home"}, method: "get") do %>
+  <%= label_tag(:q, "Who are you?") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Hola") %>
+
+<% end %>
